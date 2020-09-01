@@ -1,0 +1,11 @@
+<h1><%= "Show Page for #{@camper.name}" %></h1>
+
+<h4><%= "Name: #{@camper.name}" %></h4>
+<h4><%= "Age: #{@camper.age}" %></h4>
+<h4>Activities:
+<ul>
+<% @camper.activities.each do |activity| %>
+    <li><%= link_to "#{activity.name}", activity_path(activity) %></li>
+    <% end %>
+</ul>
+</h4>
